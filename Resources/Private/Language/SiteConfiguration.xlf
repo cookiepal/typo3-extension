@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:cookiepal_integration_v4/Resources/Private/Language/Siteonfiguration.xlf" date="2024-06-11T16:40:38Z" product-name="cookiepal_integration_v4">
+		<body>
+			<trans-unit id="tabName" resname="tabName">
+				<source><![CDATA[CookiePal Integration]]></source>
+			</trans-unit>
+			<trans-unit id="tagManager" resname="tagManager">
+				<source><![CDATA[CookiePal]]></source>
+			</trans-unit>
+			<trans-unit id="tagManagerContainerIds" resname="tagManagerContainerIds">
+				<source><![CDATA[Website ID]]></source>
+			</trans-unit>
+			<trans-unit id="tagManagerContainerIds.description" resname="tagManagerContainerIds.description">
+				<source><![CDATA[Insert your website ID from your CookiePal dashboard.]]></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

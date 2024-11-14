@@ -1,0 +1,69 @@
+{
+	"name": "cookiepal/typo3-cookiepal-integration",
+	"description": "CookiePal integration for TYPO3",
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-cms-extension",
+	"keywords": [
+		"TYPO3 CMS",
+		"TYPO3 extension",
+		"CookiePal",
+		"GDPR Consent"
+	],
+	"authors": [
+		{
+			"name": "CookiePal",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"source": "https://github.com/cookiepal/typo3-extension",
+		"docs": "https://cookiepal.io/installation-guides"
+	},
+	"require": {
+		"php": ">=8.1",
+		"typo3/cms-core": "^11.5 || ^12.4 || ^13.1",
+		"typo3/cms-frontend": "^11.5 || ^12.4 || ^13.1"
+	},
+	"require-dev": {
+		"brotkrueml/coding-standards": "~5.1.0",
+		"ergebnis/composer-normalize": "~2.42.0",
+		"php-coveralls/php-coveralls": "^2.7",
+		"phpstan/extension-installer": "^1.4",
+		"phpstan/phpstan": "1.11.4",
+		"phpunit/phpunit": "^10.5 || ^11.2",
+		"rector/rector": "1.1.0",
+		"symfony/yaml": "^5.4 || ^6.4 || ^7.1",
+		"symplify/phpstan-rules": "^12.7",
+		"tomasvotruba/cognitive-complexity": "^0.2.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Brotkrueml\\MatomoIntegration\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Brotkrueml\\MatomoIntegration\\Tests\\": "Tests"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true,
+			"phpstan/extension-installer": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"bin-dir": ".Build/bin",
+		"sort-packages": true,
+		"vendor-dir": ".Build/vendor"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "4.4.x-dev"
+		},
+		"typo3/cms": {
+			"extension-key": "cookiepal_integration_v4",
+			"web-dir": ".Build/web"
+		}
+	}
+}
