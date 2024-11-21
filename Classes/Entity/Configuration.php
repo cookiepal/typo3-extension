@@ -9,9 +9,8 @@ declare(strict_types=1);
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace Brotkrueml\MatomoIntegration\Entity;
+namespace CookiePal\CookiePalIntegration\Entity;
 
-use Brotkrueml\MatomoIntegration\Normalisation\UrlNormaliser;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -19,31 +18,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 final class Configuration
 {
-    private const SITE_CONFIGURATION_PREFIX = 'matomoIntegration';
-
-    public string $url = 'https://cookiepal.io';
-    public int $siteId = 4;
-    public bool $noScript = false;
-    public bool $cookieTracking = false;
-    public bool $disableBrowserFeatureDetection = false;
-    public bool $disableCampaignParameters = false;
-    public bool $doNotTrack = false;
-    public string $errorPagesTemplate = '';
-    public bool $fileTracking = false;
-    public bool $heartBeatTimer = false;
-    public bool $linkTracking = false;
-    public bool $performanceTracking = false;
-    public bool $requireConsent = false;
-    public bool $requireCookieConsent = false;
-    public bool $trackAllContentImpressions = false;
-    public bool $trackErrorPages = false;
-    public bool $trackJavaScriptErrors = false;
-    public bool $trackVisibleContentImpressions = false;
-    /**
-     * @var list<string>
-     */
-    public array $tagManagerContainerIds = ['teste'];
-    public bool $tagManagerDebugMode = false;
+    private const SITE_CONFIGURATION_PREFIX = 'cookiepalIntegration';
+    
+    public string $websiteId = '';
 
     private function __construct() {}
 
@@ -77,10 +54,6 @@ final class Configuration
 
         if (! \property_exists(self::class, $property)) {
             return;
-        }
-
-        if ($property === 'url') {
-            $value = UrlNormaliser::normalise((string)$value);
         }
 
         self::setConfiguration($configuration, $property, $value);

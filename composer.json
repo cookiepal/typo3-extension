@@ -25,7 +25,6 @@
 		"typo3/cms-frontend": "^11.5 || ^12.4 || ^13.1"
 	},
 	"require-dev": {
-		"brotkrueml/coding-standards": "~5.1.0",
 		"ergebnis/composer-normalize": "~2.42.0",
 		"php-coveralls/php-coveralls": "^2.7",
 		"phpstan/extension-installer": "^1.4",
@@ -38,12 +37,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Brotkrueml\\MatomoIntegration\\": "Classes"
+			"CookiePal\\CookiePalIntegration\\": "Classes"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Brotkrueml\\MatomoIntegration\\Tests\\": "Tests"
+			"CookiePal\\CookiePalIntegration\\Tests\\": "Tests"
 		}
 	},
 	"config": {
