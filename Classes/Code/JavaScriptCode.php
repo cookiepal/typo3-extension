@@ -9,7 +9,7 @@ declare(strict_types=1);
  * LICENSE.txt file that was distributed with this source code.
  */
 
-namespace Brotkrueml\MatomoIntegration\Code;
+namespace CookiePal\CookiePalIntegration\Code;
 
 final class JavaScriptCode implements \Stringable
 {

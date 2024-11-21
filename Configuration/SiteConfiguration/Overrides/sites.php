@@ -8,9 +8,9 @@
  */
 
 $GLOBALS['SiteConfiguration']['site']['columns'] += [
-    'matomoIntegrationTagManagerContainerIds' => [
-        'label' => Brotkrueml\MatomoIntegration\Extension::LANGUAGE_PATH_SITECONF . ':tagManagerContainerIds',
-        'description' => Brotkrueml\MatomoIntegration\Extension::LANGUAGE_PATH_SITECONF . ':tagManagerContainerIds.description',
+    'cookiepalIntegrationWebsiteId' => [
+        'label' => CookiePal\CookiePalIntegration\Extension::LANGUAGE_PATH_SITECONF . ':websiteId',
+        'description' => CookiePal\CookiePalIntegration\Extension::LANGUAGE_PATH_SITECONF . ':websiteId.description',
         'config' => [
             'type' => 'input',
             'size' => 30,
@@ -20,39 +20,32 @@ $GLOBALS['SiteConfiguration']['site']['columns'] += [
 ];
 
 $GLOBALS['SiteConfiguration']['site']['types']['0']['showitem'] .= ',
-    --div--;' . Brotkrueml\MatomoIntegration\Extension::LANGUAGE_PATH_SITECONF . ':tabName,
-    --palette--;;matomoIntegrationInstallation,
-    --palette--;;matomoIntegrationOptions,
-    --palette--;;matomoIntegrationTagManager,
+    --div--;' . CookiePal\CookiePalIntegration\Extension::LANGUAGE_PATH_SITECONF . ':tabName,
+    --palette--;;cookiepalIntegrationInstallation,
+    --palette--;;cookiepalIntegrationOptions,
+    --palette--;;cookiepalIntegrationTagManager,
 ';
 
 $GLOBALS['SiteConfiguration']['site']['palettes'] += [
-    'matomoIntegrationInstallation' => [
-        'label' => Brotkrueml\MatomoIntegration\Extension::LANGUAGE_PATH_SITECONF . ':installation',
-        'showitem' => 'matomoIntegrationUrl, matomoIntegrationSiteId',
+    'cookiepalIntegrationInstallation' => [
+        'label' => CookiePal\CookiePalIntegration\Extension::LANGUAGE_PATH_SITECONF . ':installation',
+        'showitem' => 'cookiepalIntegrationUrl, cookiepalIntegrationSiteId',
     ],
-    'matomoIntegrationOptions' => [
-        'label' => Brotkrueml\MatomoIntegration\Extension::LANGUAGE_PATH_SITECONF . ':options',
-        'showitem' => 'matomoIntegrationOptions, --linebreak--, matomoIntegrationErrorPagesTemplate',
+    'cookiepalIntegrationOptions' => [
+        'label' => CookiePal\CookiePalIntegration\Extension::LANGUAGE_PATH_SITECONF . ':options',
+        'showitem' => 'cookiepalIntegrationOptions, --linebreak--',
     ],
-    'matomoIntegrationTagManager' => [
-        'label' => Brotkrueml\MatomoIntegration\Extension::LANGUAGE_PATH_SITECONF . ':tagManager',
-        'showitem' => 'matomoIntegrationTagManagerContainerIds, matomoIntegrationTagManagerDebugMode',
+    'cookiepalIntegrationTagManager' => [
+        'label' => CookiePal\CookiePalIntegration\Extension::LANGUAGE_PATH_SITECONF . ':tagManager',
+        'showitem' => 'cookiepalIntegrationWebsiteId',
     ],
 ];
 
 if ((new TYPO3\CMS\Core\Information\Typo3Version())->getMajorVersion() < 12) {
-    foreach ($GLOBALS['SiteConfiguration']['site']['columns']['matomoIntegrationOptions']['config']['items'] as &$item) {
+    foreach ($GLOBALS['SiteConfiguration']['site']['columns']['cookiepalIntegrationOptions']['config']['items'] as &$item) {
         $item[0] = $item['label'];
         $item[1] = $item['value'];
         unset($item['label']);
         unset($item['value']);
     }
-
-    $GLOBALS['SiteConfiguration']['site']['columns']['matomoIntegrationTagManagerDebugMode']['config']['items'][0][0]
-        = $GLOBALS['SiteConfiguration']['site']['columns']['matomoIntegrationTagManagerDebugMode']['config']['items'][0]['label'];
-    $GLOBALS['SiteConfiguration']['site']['columns']['matomoIntegrationTagManagerDebugMode']['config']['items'][0][1]
-        = $GLOBALS['SiteConfiguration']['site']['columns']['matomoIntegrationTagManagerDebugMode']['config']['items'][0]['value'];
-    unset($GLOBALS['SiteConfiguration']['site']['columns']['matomoIntegrationTagManagerDebugMode']['config']['items'][0]['label']);
-    unset($GLOBALS['SiteConfiguration']['site']['columns']['matomoIntegrationTagManagerDebugMode']['config']['items'][0]['value']);
 }

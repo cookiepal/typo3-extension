@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Brotkrueml\MatomoIntegration\Hooks\PageRenderer\TrackingCodeInjector;
+use CookiePal\CookiePalIntegration\Hooks\PageRenderer\TrackingCodeInjector;
 
 defined('TYPO3') || die();
 

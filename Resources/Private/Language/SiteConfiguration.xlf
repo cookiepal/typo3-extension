@@ -8,10 +8,10 @@
 			<trans-unit id="tagManager" resname="tagManager">
 				<source><![CDATA[CookiePal]]></source>
 			</trans-unit>
-			<trans-unit id="tagManagerContainerIds" resname="tagManagerContainerIds">
+			<trans-unit id="websiteId" resname="websiteId">
 				<source><![CDATA[Website ID]]></source>
 			</trans-unit>
-			<trans-unit id="tagManagerContainerIds.description" resname="tagManagerContainerIds.description">
+			<trans-unit id="websiteId.description" resname="websiteId.description">
 				<source><![CDATA[Insert your website ID from your CookiePal dashboard.]]></source>
 			</trans-unit>
 		</body>
