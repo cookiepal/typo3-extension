@@ -59,7 +59,7 @@ class JavaScriptTrackingCodeBuilder
             '(function(){'
             . \sprintf('var u="%s%s";', "https://cdn.cookiepal.io/client_data/", $this->configuration->websiteId)
             . 'var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];'
-            . 'g.async=true;g.src=u+"/script.js";s.parentNode.insertBefore(g,s);'
+            . 'g.async=true;g.src=u+"/script.js?source=typo3";s.parentNode.insertBefore(g,s);'
             . '})();',
         );
     }
